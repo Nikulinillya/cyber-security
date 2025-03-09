@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <header>
+
+        <div id="logo" class="index-img-header">
+        </div>
+        
+     <button class="index-open-btn left" data-target="container1">☰ Меню</button>
+
+     <button class="index-open-btn right" data-target="container2">☰ Навігація</button>
+ 
+     <div class="index-container" id="container1">
+         <h1 class="index-h1-header">розділи сайту</h1>
+        <nav class="index-menu-neader">
+            <a class="index-nav-a-menu" href="index.html">головна</a>
+            <a class="index-nav-a-menu" href="defense.html">захист акаунтів</a>
+            <a class="index-nav-a-menu" href="schemes.html">шахрайські схеми</a>
+            <a class="index-nav-a-menu" href="networks.html">безпека в соцмережах</a>
+            <a class="index-nav-a-menu" href="tools.html">іструменти для захисту</a>
+        </nav>
+
+        <!-- <h1 class="index-h1-header">тема</h1>
+
+        <div class="tema">
+            <button class="tema-bitton" id="black">black</button>
+            <button class="tema-bitton" id="light">light</button>
+        </div>-->
+    
+        <script src="tema-script.js"></script> 
+
+         <button class="index-close-btn">Закрити</button>
+
+     </div>
+ 
+     <div class="index-container" id="container2">
+        <h1 class="index-h1-header">навігація сторінки</h1>
+        <nav class="index-navif-div">
+            <a class="index-navig" href="#main">Захистіть пристрої від несанкціонованого доступу</a>
+            <a class="index-navig" href="#importantly">Захищайте свої облікові записи в соціальних мережах</a>
+        </nav>
+         <button class="index-close-btn">Закрити</button>
+     </div>
+    
+        <script>
+            // Отримуємо всі кнопки відкриття
+const openButtons = document.querySelectorAll('.index-open-btn');
+const closeButtons = document.querySelectorAll('.index-close-btn');
+
+// Додаємо події для кожної кнопки відкриття
+openButtons.forEach(button => {
+    button.addEventListener('click', () => {
+        const targetId = button.getAttribute('data-target'); // Отримуємо ID потрібного контейнера
+        const container = document.getElementById(targetId);
+        if (container) {
+            container.style.display = 'flex';
+        }
+    });
+});
+
+// Додаємо події для кнопок закриття
+closeButtons.forEach(button => {
+    button.addEventListener('click', () => {
+        const container = button.parentElement;
+        container.style.display = 'none';
+    });
+});
+
+        </script>
+
+
+        <div class="index-nav-header">
+            <nav>
+                <a class="index-nav-a-header" href="index.html">головна</a>
+                <a class="index-nav-a-header" href="defense.html">захист акаунтів</a>
+                <a class="index-nav-a-header" href="schemes.html">шахрайські схеми</a>
+                <a class="index-nav-a-header" href="networks.html">безпека в соцмережах</a>
+                <a class="index-nav-a-header" href="tools.html">іструменти для захисту</a>
+            </nav> 
+        </div>
+
+    </header>
+
+    <main>
+        <h1 id="main" class="index-h1-header">Захистіть пристрої від несанкціонованого доступу</h1>
+        <p class="index-p-header">Оскільки люди дедалі більше покладаються на технології
+         для спілкування, роботи та доступу до послуг, зростають і ризики, пов’язані
+         з кіберзагрозами. На щастя, наші смартфони та облікові записи в соціальних
+         мережах вже мають широкий спектр функцій безпеки, які можна легко ввімкнути
+         для забезпечення максимальної цифрової безпеки. Цей вичерпний путівник
+         допоможе зорієнтуватися в цих функціях і впровадити ефективні стратегії
+         захисту ваших облікових записів, даних і пристроїв.
+        </p>
+
+        <div class="buttons-container">
+
+            <button class="info-button" data-text="Надійний, унікальний пароль для кожного
+             облікового запису має важливе значення. Уникайте поширених фраз або використання 
+             особистої інформації, наприклад, дат народження чи імен.
+             Використовуйте менеджер паролів, щоб відстежувати усі паролі. Ви можете використовувати вбудований на всіх пристроях Apple менеджер Keychain або Google Password Manager для Android.
+             Час від часу змінюйте паролі та уникайте їх повторного використання в різних облікових записах.
+             Не записуйте свої паролі на папері та не зберігайте їх у вигляді простого
+              тексту.">Використовуйте надійні та унікальні паролі
+            </button>
+
+            <button class="info-button" data-text="Багатофакторна автентифікація
+             створює додатковий рівень безпеки, запитуючи код додатково до пароля,
+             що значно ускладнює доступ до вашого облікового запису, навіть якщо
+             хтось якимось чином дізнався ваші дані для входу. Цей код зазвичай
+             надсилається через SMS або в застосунок для автентифікації.
+             Увімкніть багатофакторну автентифікацію в налаштуваннях безпеки ваших облікових записів.
+             Замість отримання кодів у SMS використовуйте застосунок для автентифікації
+            для додаткової безпеки.">Увімкніть багатофакторну автентифікацію
+            </button>
+
+            <button class="info-button" data-text="Під час завантаження пильно перевіряйте
+             застосунки та дозволи, які вони запитують.
+             Читайте відгуки користувачів перед завантаженням.
+             Надавати лише ті дозволи, які необхідні для роботи застосунку. Наприклад,
+             застосунку про погоду може знадобитися доступ до вашого місцезнаходження
+             , а простій грі — ні."> Перевіряйте дозволи та відгуки про застосунки
+            </button>
+
+            <button class="info-button" data-text="Відкриті мережі Wi-Fi
+             (не захищені паролем) можуть бути ненадійними та наражати ваші
+             дані на небезпеку. Користуйтеся ними з обережністю та уникайте
+             введення конфіденційної інформації.
+             Надавайте перевагу використанню мобільного інтернету в громадських місцях.
+             Ніколи не вводьте паролі та дані кредитних карток під час користування
+             відкритою мережею."> Уникайте використання відкритих мереж Wi-Fi
+            </button></div>
+            <div class="description-container"></div>
+          <script src="script.js"></script>
+
+
+        <img src="networks-img-main.jpg" width="700px" height="394px">
+
+        <h2 class="defense-h2-list-main">1. Встановіть пароль на своїх пристроях</h2>
+        <p class="defense-p-list-main"> Надійний пароль — це перша лінія захисту.
+         Він повинен бути складним та унікальним для кожного пристрою.
+         <br><br>
+         <b> Не використовуйте паролі, які легко вгадати, як-от 1-2-3-4 або 0-0-0-0.<br>
+          Час від часу змінюйте пароль для посилення безпеки.</b>
+        </p>
+
+        <h2 class="defense-h2-list-main">Увімкніть біометричну автентифікацію</h2>
+        <p class="defense-p-list-main">Використовуйте функції розпізнавання 
+         відбитків пальців або обличчя для додаткової безпеки. Більшість
+         сучасних пристроїв пропонують такі можливості в налаштуваннях безпеки.
+         <br><br>
+         <b> Використовуйте біометричну автентифікацію в поєднанні з надійним паролем.</b>
+        </p>
+
+        <h2 class="defense-h2-list-main">Оновлюйте свої пристрої та програмне забезпечення</h2>
+        <p class="defense-p-list-main">Захищайте свої пристрої, регулярно оновлюючи
+         операційну систему та програмне забезпечення. Увімкніть автоматичне
+         оновлення в налаштуваннях пристрою, щоб завжди мати найновішу версію.
+         <br><br>
+         <b>Перевіряйте наявність оновлень у налаштуваннях пристрою та встановлюйте їх якнайшвидше.<br>
+         Увімкніть автоматичне оновлення, щоб встановлювати нові версії, як тільки вони стають доступними.</b>
+        </p>
+
+        <h2 class="defense-h2-list-main">Увімкніть відстеження пристрою.</h2>
+        <p class="defense-p-list-main">Відстеження пристрою може допомогти
+         знайти ваш пристрій у разі крадіжки або втрати. Ця функція доступна
+         в налаштуваннях безпеки більшості смартфонів.
+         <br><br>
+         <b>Активуйте функцію «Знайти пристрій» на Android або «Знайти мій iPhone» на iOS.<br>
+         Переконайтеся, що служби визначення місцезнаходження пристрою увімкнені для точного відстеження.</b>
+        </p>
+
+        <h2 class="defense-h2-list-main">Увімкніть автоматичне резервне копіювання пристроїв</h2>
+        <p class="defense-p-list-main">Захистіть свої дані, налаштувавши автоматичне
+         резервне копіювання до хмарного сервісу або зовнішнього накопичувача.
+
+         <b> Оберіть надійний сервіс та заплануйте регулярне резервне копіювання. Пристрої на Android та iPhone пропонують таку можливість.<br>
+         Регулярно перевіряйте стан резервної копії, щоб переконатися, що дані зберігаються правильно.</b>
+        </p>
+
+        <h1 id="importantly" class="index-h1-header">Захищайте свої облікові записи в соціальних мережах</h1>
+        <p class="index-p-header">Платформи соціальних мереж пропонують прості способи перегляду налаштувань конфіденційності</p>
+
+        <div class="cards">
+            <article class="index-card-main">
+                <h2 class="index-card-h2-main"><b>Налаштуйте свої облікові записи як приватні</b></h2>
+                <p class="index-card-content"> Налаштування ваших профілів у
+                 соціальних мережах як приватних допомагає контролювати,
+                 хто може бачити ваш контент та особисту інформацію.
+                 Обмежте можливість переглядати ваші дописи невідомим контактам
+                 та уникайте поширення позначок геолокації.
+                 Регулярно переглядайте та оновлюйте налаштування конфіденційності
+                 у всіх своїх облікових записах.
+                </p>
+            </article>
+
+            <article class="index-card-main">
+                <h2 class="index-card-h2-main"><b>Відстежуйте незвичну активність</b></h2>
+                <p class="index-card-content">Відстеження незвичної активності у ваших
+                 облікових записах може допомогти своєчасно виявити несанкціонований
+                 доступ. Зазвичай відстеження можна увімкнути в налаштуваннях безпеки
+                 облікового запису.
+                 Налаштуйте сповіщення про нові входи або незвичну активність.
+                 Регулярно переглядайте журнали активності облікового запису для виявлення
+                 будь-яких підозрілих дій.
+                </p>
+            </article>
+
+            <article class="index-card-main">
+                <h2 class="index-card-h2-main"><b>Мінімізуйте обмін даними про місцезнаходження</b></h2>
+                <p class="index-card-content"> Обмежте кількість даних про місцезнаходження,
+                 якими ви ділитеся через застосунки та сервіси, щоб захистити свою
+                 конфіденційність.
+                 Вимикайте служби визначення місцезнаходження, коли в них немає потреби.
+                 Уважно слідкуйте за дозволами на визначення місцезнаходження для
+                 кожного застосунку.
+                 Ніколи не оприлюднюйте адресу свого житла та інших місць, дде ви часто буваєте.
+                </p>
+            </article>
+        </div>
+        
+
+       <script>
+       document.querySelectorAll(".index-card-main").forEach(card => {
+     card.addEventListener("click", function () {
+        // Закриваємо всі картки та робимо їх вузькими
+        document.querySelectorAll(".index-card-main").forEach(c => {
+            c.classList.remove("active");
+            c.classList.add("shrink");
+            c.querySelector(".index-card-content").style.maxHeight = null;
+            c.querySelector(".index-card-content").style.padding = "0";
+        });
+
+        // Якщо клікнули на вже активну картку — повертаємо всім початковий розмір
+        if (this.classList.contains("active")) {
+            document.querySelectorAll(".index-card-main").forEach(c => {
+                c.classList.remove("shrink");
+            });
+        } else {
+            // Робимо натиснуту картку ширшою
+            this.classList.add("active");
+            this.classList.remove("shrink");
+            let content = this.querySelector(".index-card-content");
+            content.style.maxHeight = content.scrollHeight + "px";
+            content.style.padding = "10px";
+        }
+       });
+      });
+     </script> 
+
+    </main>
+
+    <footer>
+        <div class="index-div-button-back">
+            <nav>
+                <a href="schemes.html">попередня сторінка</a>
+            </nav>
+        </div>
+
+        <div class="index-div-button-next">
+            <nav>
+                <a href="tools.html">наступна сторінка</a>
+            </nav>
+        </div>
+    </footer>
+    
+</body>
+</html>
